@@ -31,6 +31,13 @@ p, h1, h2, h3, h4, h5, h6 {
 h1,
 h2 {
     text-transform: uppercase;
+    font-weight: bold;
+	text-align: center;
+}
+
+h1 {
+    font-family: 'Bungee Shade';
+    font-size: 3rem;
 }
 
 .dashboard {
@@ -44,8 +51,25 @@ h2 {
     grid-template-rows: .7fr 2.1fr .2fr;
 }
 
+.profile {
+    text-align: center;
+}
+
+.profile p {
+    font-family: 'DotGothic16';
+    font-size: 1.2rem;
+    padding: 1rem;
+    max-width: fit-content;
+    border: 2px solid black;
+    border-radius: .5rem;
+    background: white;
+    rotate: -5deg;
+    margin-inline: auto;
+}
+
 .title {
     grid-area: title;
+    margin-bottom: 2rem;
 }
 
 .left {
