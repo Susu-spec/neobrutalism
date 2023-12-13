@@ -1,0 +1,66 @@
+*, *::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 10px;
+    grid-template-areas: '. title title .'
+                         'left center center right'
+                         'bottom bottom bottom bottom';
+    
+    grid-template-rows: .7fr 2.1fr .2fr;
+}
+
+.title {
+    grid-area: title;
+}
+
+.left {
+    grid-area: left;
+}
+
+.center {
+    grid-area: center;
+}
+
+.right {
+    grid-area: right;
+}
+
+.bottom {
+    grid-area: bottom;
+}
+
