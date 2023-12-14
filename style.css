@@ -65,6 +65,22 @@ aside {
     gap: 1.5rem;
 }
 
+table {
+    width: 100%;
+    box-shadow: 2px 2px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid black;
+    padding: .5rem;
+}
+
+th {
+    text-align: center;
+    background-color: chartreuse;
+}
+
 
 .dashboard {
     display: grid;
@@ -105,6 +121,7 @@ aside {
 
 .center {
     grid-area: center;
+    width: 98%;
 }
 
 .right {
@@ -170,8 +187,14 @@ aside {
 .flex-row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+}
+
+.table {
+    padding: 1rem;
 }
 
 /* box-shadow - offset-x offset-y */
@@ -205,4 +228,89 @@ aside {
     border-radius: 10vmax 0 0 10vmax;
     box-shadow: 3px 3px;
     background-color: rgb(253 184 55);
+}
+
+.card {
+    border: 2px solid black;
+    border-radius: .5rem;
+    box-shadow: 10px 10px;
+    background-color: #e4e4e7;
+    flex: 1;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: white;
+    background: black;
+    max-width: fit-content;
+    border: 2px solid black;
+    border-radius: 0 0 .5rem 0;
+}
+
+/* TODO: time cell should fill up content width instead of wrapping */
+
+
+.td {
+    white-space: nowrap;
+    width: 1%;
+}
+
+.activity-feed {
+    position: fixed;
+    bottom: 0;
+    min-height: 2rem;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-areas: 'h2 ul';
+    width: 100%;
+}
+
+.activity-feed h2 {
+    grid-area: h2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 1.2rem;
+    background-color: purple;
+    color: white;
+    border: 1px solid black;
+    z-index: 100;
+}
+
+.activity-feed ul {
+    grid-area: ul;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.activity-feed li {
+    font-weight: bold;
+    padding: .5rem;
+    margin: .4rem 0;
+    border: 1px solid black;
+    box-shadow: 3px 3px;
+    max-width: fit-content;
+    background: white;
+}
+
+.scroll-container {
+    background: #d4d4d8;
+    border: 2px solid black;
+}
+
+.scroll-text {
+    transform: translateX(100%);
+    animation: my-animation 30s linear infinite;
+}
+
+@keyframes my-animation {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-200%);
+    }
 }
