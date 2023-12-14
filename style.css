@@ -10,6 +10,7 @@
 body {
     padding: 0;
     font-family: 'Inter';
+    font-size: .7rem;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -27,6 +28,13 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 h1,
@@ -50,7 +58,13 @@ h2 {
 aside {
     position: fixed;
     right: 0;
+    top: 5rem;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
+
 
 .dashboard {
     display: grid;
@@ -103,10 +117,13 @@ aside {
 
 .calories {
     position: fixed;
+    top: 8rem;
     left: 0;
     max-width: fit-content;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 0 1vmax 1vmax 0;
+    box-shadow: -10px 10px;
+    background: #e4e4e7;
 }
 
 .calories h2, aside h2 {
@@ -125,10 +142,67 @@ aside {
     flex-direction: column;
     padding: 1rem;
     text-align: center;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: .5rem;
 }
 
 .calories-item p {
+    padding: .5rem;
+    margin-top: .5rem;
     margin-inline: auto;
+    border: 1px solid black;
+    border-radius: .5rem;
+    box-shadow: -3px 3px;
+}
+
+.calories-item:first-child p {
+    background-color: rgb(180 180 255);
+}
+
+.calories-item:nth-child(2) p {
+    background-color: rgb(127 127 255);
+}
+
+.calories-item:nth-child(3) p {
+    background-color: rgb(86 86 250);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* box-shadow - offset-x offset-y */
+.personal-bests, .challenges {
+    border: 2px solid black;
+    border-radius: 1vmax 0 0 1vmax;
+    background-color: #e4e4e7;
+    box-shadow: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-bests ul {
+    padding: 1rem 0 1rem 1rem;
+}
+
+/* border-radius - top-left | top-right | bottom-right | bottom-left */
+.personal-bests li {
+    padding: .5rem 1rem;
+    border-radius: 10vmax 0 0 10vmax;
+    box-shadow: 3px 3px;
+    background-color: rgb(253 55 177)
+}
+
+.challenges ul {
+    padding: 0 0 1rem 1rem;
+}
+
+.challenges li {
+    padding: .5rem 1rem;
+    border-radius: 10vmax 0 0 10vmax;
+    box-shadow: 3px 3px;
+    background-color: rgb(253 184 55);
 }
