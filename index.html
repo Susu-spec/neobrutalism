@@ -17,50 +17,55 @@
 			<div class="title">
 				<div class="profile">
 					<h1>Good Morning Champ!</h1>
-					<p>Time to seize the day 🌞</p>
+					<button id="button" class="button">
+						<p>Time to seize the day 🌞</p>
+					</button>
 				</div>
 			</div>
             <!--TODO: Make button here to introduce dropdown-->
-			<div class="left">
-				<div class="calories">
-					<h2>Active Calories</h2>
-					<div class="calories-container">
-						<div class="calories-item">
-							<strong>Today:</strong>
-							<p>500</p>
-						</div>
-						<div class="calories-item">
-							<strong>This Week:</strong>
-							<p>3500</p>
-						</div>
-						<div class="calories-item">
-							<strong>This Month:</strong>
-							<p>14000</p>
+			
+			<div class="side">
+				<div class="left">
+					<div class="calories">
+						<h2>Active Calories</h2>
+						<div class="calories-container">
+							<div class="calories-item">
+								<strong>Today:</strong>
+								<p>500</p>
+							</div>
+							<div class="calories-item">
+								<strong>This Week:</strong>
+								<p>3500</p>
+							</div>
+							<div class="calories-item">
+								<strong>This Month:</strong>
+								<p>14000</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-            <!--TODO: Make button here to introduce dropdown-->
-			<div class="right">
-				<aside>
-					<div class="personal-bests">
-						<h2>Personal Bests</h2>
-						<ul>
-							<li>Fastest 5K Run: <strong>22 min</strong></li>
-							<li>Heaviest Deadlift: <strong>250 lbs</strong></li>
-							<li>Longest Plank: <strong>3 min</strong></li>
-						</ul>
-					</div>
-
-					<div class="challenges">
-						<h2>Challenges</h2>
-						<ul>
-							<li><strong>30-Day</strong> Running Streak</li>
-							<li><strong>1000</strong> Pushups in a Month</li>
-							<li>Swim <strong>20km</strong> in a Month</li>
-						</ul>
-					</div>
-				</aside>
+				<!--TODO: Make button here to introduce dropdown-->
+				<div class="right">
+					<aside>
+						<div class="personal-bests">
+							<h2>Personal Bests</h2>
+							<ul>
+								<li>Fastest 5K Run: <strong>22 min</strong></li>
+								<li>Heaviest Deadlift: <strong>250 lbs</strong></li>
+								<li>Longest Plank: <strong>3 min</strong></li>
+							</ul>
+						</div>
+	
+						<div class="challenges">
+							<h2>Challenges</h2>
+							<ul>
+								<li><strong>30-Day</strong> Running Streak</li>
+								<li><strong>1000</strong> Pushups in a Month</li>
+								<li>Swim <strong>20km</strong> in a Month</li>
+							</ul>
+						</div>
+					</aside>
+				</div>
 			</div>
 			<div class="center">
 				<div class="flex-row">
@@ -108,27 +113,27 @@
 								<tr>
 									<td>Monday</td>
 									<td>Running</td>
-									<td>6:00 AM</td>
+									<td class="td">6:00 AM</td>
 								</tr>
 								<tr>
 									<td>Tuesday</td>
 									<td>Swimming</td>
-									<td>7:00 AM</td>
+									<td class="td">7:00 AM</td>
 								</tr>
 								<tr>
 									<td>Wednesday</td>
 									<td>Cycling</td>
-									<td>6:30 AM</td>
+									<td class="td">6:30 AM</td>
 								</tr>
 								<tr>
 									<td>Thursday</td>
 									<td>Yoga</td>
-									<td>6:00 AM</td>
+									<td class="td">6:00 AM</td>
 								</tr>
 								<tr>
 									<td>Friday</td>
 									<td>Weight Training</td>
-									<td>8:00 AM</td>
+									<td class="td">8:00 AM</td>
 								</tr>
 							</table>
 						</div>
@@ -139,6 +144,7 @@
 				<div class="activity-feed">
 					<h2>Friends Activity</h2>
 					<div class="scroll-container">
+						<!--Increase width of li containers to accomodate text-->
 						<div class="scroll-text">
 							<ul>
 								<li>Jane just set a new record in cycling: 30 miles!</li>
@@ -153,4 +159,5 @@
 
 		<div class="grain"></div>
 	</body>
+	<script src="./app.js"></script>
 </html>

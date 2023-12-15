@@ -24,6 +24,8 @@ img, picture, video, canvas, svg {
   
 input, button, textarea, select {
     font: inherit;
+    border: none;
+    background-color: transparent;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -86,7 +88,7 @@ th {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px 10px;
-    grid-template-areas: '. title title .'
+    grid-template-areas: 'title title title title'
                          'left center center right'
                          'bottom bottom bottom bottom';
     
@@ -97,7 +99,11 @@ th {
     text-align: center;
 }
 
-.profile p {
+.profile h1 {
+    width: 100%;
+}
+
+.profile .button {
     font-family: 'DotGothic16';
     font-size: 1.2rem;
     padding: 1rem;
@@ -108,6 +114,20 @@ th {
     background: white;
     rotate: -5deg;
     margin-inline: auto;
+}
+
+.button:active {
+    animation: click .3s ease-in-out;
+}
+
+@keyframes click {
+    from {
+        box-shadow: 5px 5px;
+    }
+
+    to {
+        box-shadow: none;
+    }
 }
 
 .title {
@@ -130,6 +150,17 @@ th {
 
 .bottom {
     grid-area: bottom;
+}
+
+.side {
+    opacity: 0;
+    z-index: -1;
+}
+
+.d-block {
+    opacity: 1;
+    z-index: 2;
+    transition: opacity 2s;
 }
 
 .calories {
@@ -270,8 +301,8 @@ th {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    font-size: 1.2rem;
+    padding: 0 .2rem;
+    font-size: .9rem;
     background-color: purple;
     color: white;
     border: 1px solid black;
@@ -283,17 +314,19 @@ th {
     padding: 0;
     display: flex;
     flex-direction: row;
+    gap: 3rem;
 
 }
 
 .activity-feed li {
     font-weight: bold;
-    padding: .5rem;
+    padding: .2rem;
     margin: .4rem 0;
     border: 1px solid black;
     box-shadow: 3px 3px;
     max-width: fit-content;
     background: white;
+    line-height: .8rem;
 }
 
 .scroll-container {
@@ -303,7 +336,12 @@ th {
 
 .scroll-text {
     transform: translateX(100%);
-    animation: my-animation 30s linear infinite;
+    animation: my-animation 60s linear infinite;
+}
+
+.animated-sides {
+    animation: growUp 500ms ease-in-out;
+    transform-origin: center;
 }
 
 @keyframes my-animation {
@@ -311,6 +349,52 @@ th {
         transform: translateX(100%);
     }
     to {
-        transform: translateX(-200%);
+        transform: translateX(-100%);
     }
+}
+
+@keyframes growUp {
+    0% {
+        transform: rotateX(-90deg)
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: rotateX(20deg)
+    }
+    90% {
+        transform: rotateX(0deg) 
+    }
+    100% {
+        transform: scale(1)
+    }
+} 
+
+
+@media only screen and (min-width: 31.25rem) {
+    .dashboard {
+        grid-template-areas: '. title title .'
+                         'left center center right'
+                         'bottom bottom bottom bottom';
+    }
+
+    .profile h1 {
+        width: auto;
+    }
+    .activity-feed h2 {
+        font-size: 1.2rem;
+        padding: 0;
+    }
+
+    .activity-feed ul {
+        gap: 5rem;
+    }
+
+    .activity-feed li {
+        padding: .5rem;
+        line-height: 1.5;
+    }
+
+
 }
