@@ -7,14 +7,18 @@
     margin: 0;
 }
 
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     font-family: 'Inter';
     font-size: .7rem;
     line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-	scroll-behavior: smooth;
+    cursor: default;
 }
 
 body {
@@ -37,7 +41,6 @@ input, button, textarea, select {
     border: none;
     background-color: transparent;
 }
-
 
 ul {
     list-style-type: none;
@@ -80,6 +83,10 @@ table {
     border-collapse: collapse;
 }
 
+.table {
+    padding: 1rem;
+}
+
 table:hover {
     box-shadow: 5px 5px;
 }
@@ -96,7 +103,6 @@ th {
 
 tr:hover {
     background-color: #a1a1aa;
-    cursor: default;
 }
 
 .dashboard {
@@ -253,10 +259,6 @@ tr:hover {
     gap: 2rem;
 }
 
-.table {
-    padding: 1rem;
-}
-
 /* box-shadow - offset-x offset-y */
 .personal-bests, .challenges {
     border: 2px solid black;
@@ -279,6 +281,11 @@ tr:hover {
     background-color: rgb(253 55 177)
 }
 
+.personal-bests li:hover {
+    background-color: rgb(253, 106, 197);
+	box-shadow: 5px 5px;
+}
+
 .challenges ul {
     padding: 0 0 1rem 1rem;
 }
@@ -293,7 +300,6 @@ tr:hover {
 .challenges li:hover {
 	background-color: rgb(255, 202, 104);
 	box-shadow: 5px 5px;
-	cursor: default;
 }
 
 .card {
@@ -315,7 +321,6 @@ tr:hover {
 
 .card:hover {
 	box-shadow: 15px 15px;
-	cursor: default;
 }
 
 .td {
@@ -346,6 +351,10 @@ tr:hover {
     z-index: 100;
 }
 
+.activity-feed h2:hover {
+    cursor: default;
+}
+
 .activity-feed ul {
     grid-area: ul;
     padding: 0;
@@ -366,6 +375,12 @@ tr:hover {
     overflow-wrap: break-word;
     background: white;
     line-height: .8rem;
+}
+
+.activity-feed li:hover {
+    background-color: #e1d9d1;
+    box-shadow: 8px 8px;
+    cursor: default;
 }
 
 .scroll-container {
