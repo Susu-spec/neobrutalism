@@ -9,3 +9,32 @@ button.addEventListener('click', () => {
     aside.classList.toggle("animated-sides");
 });
 
+
+/**
+ if (a > b) {
+    result = x;
+} else {
+    result = y;
+}
+result = a > b ? x : y;
+ */
+const stackOrder = document.querySelector('stack-order');
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stackOrderDivs = document.querySelectorAll('.stack-order');
+
+    stackOrderDivs.forEach(div => {
+      div.addEventListener('click', function () {
+        const clickedDiv = this;
+        const otherDiv = (clickedDiv === stackOrderDivs[0]) ? stackOrderDivs[1] : stackOrderDivs[0];
+        if (clickedDiv.style.zIndex === '-1') {
+            clickedDiv.style.zIndex = '1';
+            otherDiv.style.zIndex = '-1'; 
+        }
+    
+      });
+    });
+  });
+
+
+
