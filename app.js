@@ -9,8 +9,8 @@ button.addEventListener('click', () => {
     aside.classList.toggle("animated-sides");
 });
 
-
 /**
+boolean statement ? true result : false result;
  if (a > b) {
     result = x;
 } else {
@@ -18,6 +18,7 @@ button.addEventListener('click', () => {
 }
 result = a > b ? x : y;
  */
+
 const stackOrder = document.querySelector('stack-order');
 
 document.addEventListener('DOMContentLoaded', function() {

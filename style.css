@@ -17,6 +17,16 @@ body {
 	scroll-behavior: smooth;
 }
 
+body {
+    background-color: #e5e5f7;
+    background: linear-gradient(135deg, #f700ff55 25%, transparent 25%) -20px 0/
+    40px 40px,
+    linear-gradient(225deg, #f700ff 25%, transparent 25%) -20px 0/ 40px 40px,
+    linear-gradient(315deg, #f700ff55 25%, transparent 25%) 0px 0/ 40px 40px,
+    linear-gradient(45deg, #f700ff 25%, #e5e5f7 25%) 0px 0/ 40px 40px;
+
+}
+
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
@@ -70,6 +80,10 @@ table {
     border-collapse: collapse;
 }
 
+table:hover {
+    box-shadow: 5px 5px;
+}
+
 table, th, td {
     border: 2px solid black;
     padding: .5rem;
@@ -80,6 +94,10 @@ th {
     background-color: chartreuse;
 }
 
+tr:hover {
+    background-color: #a1a1aa;
+    cursor: default;
+}
 
 .dashboard {
     display: grid;
@@ -111,6 +129,12 @@ th {
     background: white;
     rotate: -5deg;
     margin-inline: auto;
+}
+
+.profile .button:hover {
+    box-shadow: 10px 10px;
+    background: #e1d9d1;
+    cursor: pointer;
 }
 
 .button:active {
@@ -204,6 +228,10 @@ th {
     box-shadow: -3px 3px;
 }
 
+.calories-item:hover p {
+	box-shadow: -5px 5px;
+}
+
 .calories-item:first-child p {
     background-color: rgb(180 180 255);
 }
@@ -262,6 +290,12 @@ th {
     background-color: rgb(253 184 55);
 }
 
+.challenges li:hover {
+	background-color: rgb(255, 202, 104);
+	box-shadow: 5px 5px;
+	cursor: default;
+}
+
 .card {
     border: 2px solid black;
     border-radius: .5rem;
@@ -279,8 +313,10 @@ th {
     border-radius: 0 0 .5rem 0;
 }
 
-/* TODO: time cell should fill up content width instead of wrapping */
-
+.card:hover {
+	box-shadow: 15px 15px;
+	cursor: default;
+}
 
 .td {
     white-space: nowrap;
@@ -326,6 +362,8 @@ th {
     border: 1px solid black;
     box-shadow: 3px 3px;
     max-width: fit-content;
+    min-width: calc(40% + 1rem);
+    overflow-wrap: break-word;
     background: white;
     line-height: .8rem;
 }
@@ -344,6 +382,32 @@ th {
     animation: growUp 500ms ease-in-out;
     transform-origin: center;
 }
+
+.grain {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -2;
+	transform: translateZ(0);
+}
+
+.grain:before {
+	content: '';
+    top: -10rem;
+	left: -10rem;
+	width: calc(100% + 20rem);
+	height: calc(100% + 20rem);
+	z-index: 9999;
+	position: fixed;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+	opacity: 0.5;
+	pointer-events: none;
+	animation: noise 1s steps(2) infinite;
+}
+
+
 
 @keyframes my-animation {
     from {
@@ -372,6 +436,42 @@ th {
     }
 } 
 
+@keyframes noise {
+	0% {
+		transform: translate3d(0, 9rem, 0);
+	}
+	10% {
+		transform: translate3d(-1rem, -4rem, 0);
+	}
+	20% {
+		transform: translate3d(-8rem, 2rem, 0);
+	}
+	30% {
+		transform: translate3d(9rem, -9rem, 0);
+	}
+	40% {
+		transform: translate3d(-2rem, 7rem, 0);
+	}
+	50% {
+		transform: translate3d(-9rem, -4rem, 0);
+	}
+	60% {
+		transform: translate3d(2rem, 6rem, 0);
+	}
+	70% {
+		transform: translate3d(7rem, -8rem, 0);
+	}
+	80% {
+		transform: translate3d(-9rem, 1rem, 0);
+	}
+	90% {
+		transform: translate3d(6rem, -5rem, 0);
+	}
+	to {
+		transform: translate3d(-7rem, 0, 0);
+	}
+}
+
 
 @media only screen and (min-width: 31.25rem) {
     .dashboard {
@@ -395,7 +495,6 @@ th {
     .activity-feed li {
         padding: .5rem;
         line-height: 1.5;
+        min-width: auto;
     }
-
-
 }
