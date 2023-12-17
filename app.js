@@ -21,8 +21,7 @@ result = a > b ? x : y;
 
 const stackOrder = document.querySelector('stack-order');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const stackOrderDivs = document.querySelectorAll('.stack-order');
+const stackOrderDivs = document.querySelectorAll('.stack-order');
 
     stackOrderDivs.forEach(div => {
       div.addEventListener('click', function () {
@@ -34,8 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
       });
-    });
-  });
+});
 
+/**
+ * document.addEventListener('DOMContentLoaded', function() {});
+ */
 
 
