@@ -11,6 +11,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	scroll-behavior: smooth;
+    font-display: swap;
     transition: all .2s ease-in;
 }
 
@@ -416,8 +417,8 @@ tr:hover {
 	background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
 	opacity: 0.5;
 	pointer-events: none;
-	animation: noise 1s steps(2) .1s infinite;
-    -moz-animation: noise 1s steps(2) .1s infinite;
+	animation: noise 1s steps(2) infinite;
+    -moz-animation: noise 1s steps(2) infinite;
 }
 
 @keyframes my-animation {
