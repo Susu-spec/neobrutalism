@@ -28,7 +28,6 @@ body {
     linear-gradient(225deg, #f700ff 25%, transparent 25%) -20px 0/ 40px 40px,
     linear-gradient(315deg, #f700ff55 25%, transparent 25%) 0px 0/ 40px 40px,
     linear-gradient(45deg, #f700ff 25%, #e5e5f7 25%) 0px 0/ 40px 40px;
-
 }
 
 img, picture, video, canvas, svg {
@@ -361,7 +360,6 @@ tr:hover {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-
 }
 
 .activity-feed li {
@@ -379,8 +377,7 @@ tr:hover {
 
 .activity-feed li:hover {
     background-color: #e1d9d1;
-    box-shadow: 8px 8px;
-    cursor: default;
+    box-shadow: 5px 5px;
 }
 
 .scroll-container {
@@ -421,8 +418,6 @@ tr:hover {
 	pointer-events: none;
 	animation: noise 1s steps(2) infinite;
 }
-
-
 
 @keyframes my-animation {
     from {
@@ -500,7 +495,6 @@ tr:hover {
     }
     .activity-feed h2 {
         font-size: 1.2rem;
-        padding: 0;
     }
 
     .activity-feed ul {
