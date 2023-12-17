@@ -11,6 +11,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	scroll-behavior: smooth;
+    transition: all .2s ease-in;
 }
 
 body {
@@ -117,10 +118,6 @@ tr:hover {
 
 .profile {
     text-align: center;
-}
-
-.profile h1 {
-    width: 100%;
 }
 
 .profile .button {
@@ -364,15 +361,17 @@ tr:hover {
 
 .activity-feed li {
     font-weight: bold;
-    padding: .2rem;
+    padding: .5rem;
     margin: .4rem 0;
     border: 1px solid black;
     box-shadow: 3px 3px;
     max-width: fit-content;
-    min-width: calc(40% + 1rem);
+    min-width: fit-content;
     overflow-wrap: break-word;
     background: white;
     line-height: .8rem;
+    display: flex;
+    align-items: center;
 }
 
 .activity-feed li:hover {
@@ -388,6 +387,7 @@ tr:hover {
 .scroll-text {
     transform: translateX(100%);
     animation: my-animation 60s linear infinite;
+    -moz-animation: my-animation 60s linear infinite;
 }
 
 .animated-sides {
@@ -416,7 +416,8 @@ tr:hover {
 	background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
 	opacity: 0.5;
 	pointer-events: none;
-	animation: noise 1s steps(2) infinite;
+	animation: noise 1s steps(2) .1s infinite;
+    -moz-animation: noise 1s steps(2) .1s infinite;
 }
 
 @keyframes my-animation {
@@ -504,12 +505,11 @@ tr:hover {
     .activity-feed li {
         padding: .5rem;
         line-height: 1.5;
-        min-width: auto;
     }
 }
 
-@media only screen and (min-width: 31.25rem) and (max-width: 43.75rem) {
-    .activity-feed li {
-        min-width: calc(40% + 1rem);;
+@media only screen and (min-width: 31.25rem) and (max-width: 50rem) {
+    .activity-feed h2 {
+        font-size: 1rem;
     }
 }
